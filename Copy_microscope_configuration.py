@@ -1,10 +1,16 @@
 import shutil, os, platform
 
-def main():
+def supported_platform():
     # only supports Windows
     if platform.system() != "Windows":
         print("Error: Not a Windows system.")
-        quit()
+        return False
+
+    return True
+ 
+def main():
+    if not supported_platform():
+       quit()
 
     username = os.getlogin() # gets the folder name of the logged in user in C:\Users\ folder
     settings_folder_path = "C:\\Users\\" + username + "\\AppData\\Local"
