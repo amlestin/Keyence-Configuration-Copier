@@ -19,11 +19,11 @@ def main():
     master_config_exists = os.path.exists(master_config_folder_path) # checks that there is a folder to write from 
 
     if master_config_exists == True:
-        if (os.path.exists(settings_folder_path + "\\Keyence\\")): # makes backup if the user has previous config files
+        if os.path.exists(settings_folder_path + "\\Keyence\\"): # makes backup if the user has previous config files
             error_file = open("ERROR-LOG.txt", "w")
             user_documents_path = "C:\\Users\\" + username + "\\Documents\\Keyence\\"
             
-            if (os.path.exists(user_documents_path)): # deletes the previous backup if it exists
+            if os.path.exists(user_documents_path): # deletes the previous backup if it exists
                 shutil.rmtree(user_documents_path, ignore_errors=True) # delete
                 
             shutil.copytree(settings_folder_path + "\\Keyence\\", user_documents_path) # makes backup of user's current config files
