@@ -18,7 +18,7 @@ def main():
     master_config_folder_path = "C:\\BZ-X"
     master_config_exists = os.path.exists(master_config_folder_path) # checks that there is a folder to write from 
 
-    if master_config_exists == True:
+    if master_config_exists:
         if os.path.exists(settings_folder_path + "\\Keyence\\"): # makes backup if the user has previous config files
             error_file = open("ERROR-LOG.txt", "w")
             user_documents_path = "C:\\Users\\" + username + "\\Documents\\Keyence\\"
