@@ -13,7 +13,7 @@ def main():
        quit()
 
     username = os.getlogin() # gets the folder name of the logged in user in C:\Users\ folder
-    settings_folder_path = "C:\\Users\\" + username + "\\AppData\\Local"
+    settings_folder_path = f"C:\\Users\\{username}\\AppData\\Local"
 
     master_config_folder_path = "C:\\BZ-X"
     master_config_exists = os.path.exists(master_config_folder_path) # checks that there is a folder to write from 
