@@ -1,8 +1,7 @@
 import shutil, os, platform
 
-def supported_platform():
+def supported_platform(user_platform):
     # only supports Windows
-    user_platform = platform.system() 
     if user_platform != "Windows":
         print(f"Error: {user_platform} is not a Windows system.")
         return False
@@ -10,7 +9,8 @@ def supported_platform():
     return True
  
 def main():
-    if not supported_platform():
+    user_platform = platform.system() 
+    if not supported_platform(user_platform):
        quit()
 
     username = os.getlogin() # gets the folder name of the logged in user in C:\Users\ folder
