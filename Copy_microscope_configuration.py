@@ -29,8 +29,8 @@ def main():
                 
             shutil.copytree(f"{settings_folder_path}\\Keyence\\", user_documents_path) # makes backup of user's current config files
             shutil.rmtree(f"{settings_folder_path}\\Keyence\\", ignore_errors=True) # deletes the user's current config files
-            text = f"Old Keyence folder saved at {user_documents_path}"
-            error_file.write(text) # writes a file so the user knows their old configuration files were backed up and where
+
+            error_file.write(f"Old Keyence folder saved at {user_documents_path}") # writes a file so the user knows their old configuration files were backed up and where
             error_file.close()
         shutil.copytree(master_config_folder_path, f"{settings_folder_path}\\Keyence\\BZ-X\\") # copies the master configuration to this user's account
             
