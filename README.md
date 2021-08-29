@@ -9,3 +9,6 @@ https://medium.com/dreamcatcher-its-blog/making-an-stand-alone-executable-from-a
 ## Making it accessible to all users on a shared computer:
 
 Move the executable to C:\Users\Public\Desktop\
+
+![lab](https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Scientist_during_microscopic_observation_of_the_PCB_component.jpg/1920px-Scientist_during_microscopic_observation_of_the_PCB_component.jpg)
+Source: https://commons.wikimedia.org/wiki/File:Scientist_during_microscopic_observation_of_the_PCB_component.jpg
